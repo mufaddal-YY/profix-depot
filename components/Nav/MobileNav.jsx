@@ -25,7 +25,7 @@ const MobileNav = ({ productsData, contactData }) => {
       <SheetTrigger asChild>
         <AlignJustify className="text-primary cursor-pointer" />
       </SheetTrigger>
-      <SheetContent className="z-[1010]">
+      <SheetContent className="z-[1012]">
         <SheetTitle></SheetTitle>
         <div className="grid py-4 list-none ">
           <Link
