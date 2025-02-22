@@ -21,7 +21,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { Button } from "../ui/button";
 import MobileNav from "./MobileNav";
 
-const Header = ({ productsData }) => {
+const Header = ({ productsData, contactData }) => {
   return (
     <main className="bg-white fixed w-full top-14 z-[1000] shadow-md">
       <header className="container py-3">
@@ -95,7 +95,7 @@ const Header = ({ productsData }) => {
             </Button>
           </Link>
           <div className="lg:hidden flex">
-            <MobileNav productsData={productsData} />
+            <MobileNav contactData={contactData} productsData={productsData} />
           </div>
         </article>
       </header>

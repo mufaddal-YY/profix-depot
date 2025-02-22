@@ -46,7 +46,7 @@ export async function getHomeData() {
 
 export async function getProductsData() {
   const result = await client.fetch(
-    groq`*[_type == "products"]{
+    groq`*[_type == "products"] | order(_createdAt asc){
          _id,
          _createdAt,
          metaTitle,

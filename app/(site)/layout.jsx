@@ -27,11 +27,8 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body className={`${inter.className} antialiased`}>
         <TopBar contactData={contactData} />
-        <Header productsData={productsData} />
-        <main className="mt-32">
-
-        {children}
-        </main>
+        <Header productsData={productsData} contactData={contactData} />
+        <main className="mt-32">{children}</main>
         <Footer contactData={contactData} productsData={productsData} />
         <Suspense>
           <ProgressBars />

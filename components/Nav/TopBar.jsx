@@ -13,7 +13,7 @@ const TopBar = ({ contactData }) => {
               <Link
                 target="_blank"
                 href={`
-                https://api.whatsapp.com/send/?phone=%2B${item.whatsapp}&text=Hi+further&type=phone_number&app_absent=0`}>
+                https://api.whatsapp.com/send/?phone=%2B${item.whatsapp}&text=Hi&type=phone_number&app_absent=0`}>
                 <Button
                   variant="secondary"
                   className="flex gap-2 text-primary font-semibold items-center">

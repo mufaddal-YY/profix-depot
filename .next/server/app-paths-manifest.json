@@ -1,0 +1,7 @@
+{
+  "/(site)/page": "app/(site)/page.js",
+  "/(site)/products/[slug]/[categorySlug]/page": "app/(site)/products/[slug]/[categorySlug]/page.js",
+  "/(studio)/admin/[[...tool]]/page": "app/(studio)/admin/[[...tool]]/page.js",
+  "/(site)/products/[slug]/page": "app/(site)/products/[slug]/page.js",
+  "/(site)/gallery/page": "app/(site)/gallery/page.js"
+}
