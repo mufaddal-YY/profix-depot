@@ -12,7 +12,11 @@ const Footer = ({ productsData, contactData }) => {
           <div className=" flex flex-col gap-2 mb-4 w-full md:w-1/2 lg:w-1/4 p-2">
             <div className="">
               <Link href={"/"} className="flex items-center">
+<<<<<<< HEAD
                 <Image width={250} height={50} src={Logo} alt="footer logo" />
+=======
+                <Image width={250} height={50} src={Logo} alt="footer logo"/>
+>>>>>>> origin/main
               </Link>
             </div>
             {/* <div className="py-2">
@@ -98,8 +102,12 @@ const Footer = ({ productsData, contactData }) => {
         <hr />
         <div className="py-2 text-center font-regular items-center text-md text-primary">
           <span>
+<<<<<<< HEAD
             © 2025 Profix Depot | Home Imrovement Store. All Rights Reserved. |{" "}
             <Link href={"/return-policy"}>Return Policy</Link>
+=======
+            © 2025 Profix Depot | Home Imrovement Store. All Rights Reserved.
+>>>>>>> origin/main
           </span>
         </div>
       </div>

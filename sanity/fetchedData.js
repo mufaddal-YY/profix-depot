@@ -73,6 +73,7 @@ export async function getProductsDetailData(slug) {
     groq`
     *[_type == "products" && slug.current == $slug][0]{
         _id,
+<<<<<<< HEAD
         _createdAt,
         metaTitle,
         metaDescription,
@@ -96,6 +97,29 @@ export async function getProductsDetailData(slug) {
           }
         }
     }`,
+=======
+         _createdAt,
+         metaTitle,
+         metaDescription,
+         metaKeywords,
+         headline,
+         "slug": slug.current,
+         subHeadline,
+         content,
+         "image": image.asset->url,
+         categories[]{
+         categoryTitle,
+         "categorySlug": categorySlug.current,
+         categoryDescription,
+         "image": image.asset->url,
+         content,
+         images[]{
+         imageTitle,
+         "image": image.asset->url,
+         },
+         } 
+        }`,
+>>>>>>> origin/main
     { slug, defaultFetchOptions }
   );
 }
@@ -212,6 +236,7 @@ export async function getContactData() {
   );
   return result;
 }
+<<<<<<< HEAD
 
 export async function getReturnPolicyData() {
   const result = await client.fetch(
@@ -229,3 +254,5 @@ export async function getReturnPolicyData() {
   );
   return result;
 }
+=======
+>>>>>>> origin/main
