@@ -73,27 +73,29 @@ export async function getProductsDetailData(slug) {
     groq`
     *[_type == "products" && slug.current == $slug][0]{
         _id,
-         _createdAt,
-         metaTitle,
-         metaDescription,
-         metaKeywords,
-         headline,
-         "slug": slug.current,
-         subHeadline,
-         content,
-         "image": image.asset->url,
-         categories[]{
-         categoryTitle,
-         "categorySlug": categorySlug.current,
-         categoryDescription,
-         "image": image.asset->url,
-         content,
-         images[]{
-         imageTitle,
-         "image": image.asset->url,
-         },
-         } 
-        }`,
+        _createdAt,
+        metaTitle,
+        metaDescription,
+        metaKeywords,
+        headline,
+        "slug": slug.current,
+        subHeadline,
+        content[],
+        contentHeadline,
+        "additionalImage": additionalImage.asset->url,        
+        "image": image.asset->url,
+        categories[]{
+          categoryTitle,
+          "categorySlug": categorySlug.current,
+          categoryDescription,
+          "image": image.asset->url,
+          content[],
+          images[]{
+            imageTitle,
+            "image": image.asset->url,
+          }
+        }
+    }`,
     { slug, defaultFetchOptions }
   );
 }
@@ -204,6 +206,23 @@ export async function getContactData() {
         instagram,
         facebook,
         youtube,
+        }`,
+    {},
+    defaultFetchOptions
+  );
+  return result;
+}
+
+export async function getReturnPolicyData() {
+  const result = await client.fetch(
+    groq`*[_type == "returnpolicy"]{
+         _id,
+         _createdAt,
+         metaTitle,
+         metaDescription,
+         metaKeywords,
+         headline,
+         content,
         }`,
     {},
     defaultFetchOptions

@@ -48,6 +48,20 @@ export default {
       ],
     },
     {
+      name: "contentHeadline",
+      title: "Additional Headline",
+      type: "string",
+    },
+    {
+      name: "additionalImage",
+      title: "Additional Image",
+      type: "image",
+      options: {
+        hotspot: true, // <-- Defaults to false
+      },
+    },
+
+    {
       name: "image",
       title: "Image",
       type: "image",
