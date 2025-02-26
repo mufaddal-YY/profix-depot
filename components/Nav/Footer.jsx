@@ -13,19 +13,9 @@ const Footer = ({ productsData, contactData }) => {
             <div className="">
               <Link href={"/"} className="flex items-center">
                 <Image width={250} height={50} src={Logo} alt="footer logo" />
-
-                <Image width={250} height={50} src={Logo} alt="footer logo" />
               </Link>
             </div>
-            {/* <div className="py-2">
-              <ul className="flex flex-row gap-4">
-                <li className="text-sm p-2">
-                  Embark on a global culinary journey with our exceptional
-                  wholesale food exports. Our reach spans the entire globe,
-                  ensuring that our superior products reach every corner.
-                </li>
-              </ul>
-            </div> */}
+            
           </div>
           <div className="flex flex-col gap-2 mb-4 w-full md:w-1/2 lg:w-1/4 p-2">
             <div className="mb-2 border-b-[1px] border-gray-400">
@@ -100,9 +90,8 @@ const Footer = ({ productsData, contactData }) => {
         <hr />
         <div className="py-2 text-center font-regular items-center text-md text-primary">
           <span>
-            © 2025 Profix Depot | Home Imrovement Store. All Rights Reserved. |{" "}
-            <Link href={"/return-policy"}>Return Policy</Link>© 2025 Profix
-            Depot | Home Imrovement Store. All Rights Reserved.
+            © 2025 Profix Depot | Home Imrovement Store. All Rights Reserved. |
+            <Link href={"/return-policy"}>Return Policy</Link>
           </span>
         </div>
       </div>
