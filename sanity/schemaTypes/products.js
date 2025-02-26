@@ -48,7 +48,6 @@ export default {
       ],
     },
     {
-<<<<<<< HEAD
       name: "contentHeadline",
       title: "Additional Headline",
       type: "string",
@@ -63,8 +62,6 @@ export default {
     },
 
     {
-=======
->>>>>>> origin/main
       name: "image",
       title: "Image",
       type: "image",
