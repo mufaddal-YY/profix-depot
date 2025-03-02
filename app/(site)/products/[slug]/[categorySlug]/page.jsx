@@ -4,10 +4,7 @@ import ProductInfoSection from "@/components/Products/ProductInfoSection";
 import { getCategoryDetailData } from "@/sanity/fetchedData";
 
 const CategoryDetailPage = async ({ params }) => {
-  console.log("Params received:", params);
-
   const { categorySlug } = await params;
-  console.log("Fetching data for:", categorySlug);
 
   const detailData = await getCategoryDetailData(categorySlug);
 
@@ -16,7 +13,6 @@ const CategoryDetailPage = async ({ params }) => {
   }
 
   const categoryDetail = detailData.category;
-  console.log(categoryDetail);
 
   return (
     <main>

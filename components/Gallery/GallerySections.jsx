@@ -6,7 +6,7 @@ const GallerySections = ({ galleryData }) => {
   return (
     <main className="bg-white">
       <section className="container py-8">
-        <div className="p-2">
+        {/* <div className="p-2">
           <div className="border-l-4 border-[#3e2522] mb-8">
             <h4 className="text-md lg:text-md text-[#3e2522] capitalize font-semibold pl-4">
               Gallery
@@ -15,7 +15,7 @@ const GallerySections = ({ galleryData }) => {
               Our Work
             </h1>
           </div>
-        </div>
+        </div> */}
         {galleryData?.map((item, idx) => (
           <article className="flex flex-wrap flex-row" key={idx}>
             {item.images.map((data, idx) => (

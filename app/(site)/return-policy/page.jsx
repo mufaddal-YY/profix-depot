@@ -4,7 +4,7 @@ import { getReturnPolicyData } from "@/sanity/fetchedData";
 
 const ReturnPolicy = async () => {
   const policyData = await getReturnPolicyData();
-  console.log(policyData);
+
   return (
     <main className="items-center bg-white">
       <section className="py-[50px] container">
