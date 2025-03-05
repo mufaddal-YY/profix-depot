@@ -50,7 +50,7 @@ const ServicesSection = ({ homeData }) => {
               />
 
               {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
+              <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
 
               {/* Content Box */}
               <div className="absolute inset-0 flex justify-start items-end z-20 p-6">
@@ -80,7 +80,7 @@ const ServicesSection = ({ homeData }) => {
                   objectFit="cover"
                   className="absolute inset-0 w-full h-full rounded-lg"
                 />
-                <div className="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
+                <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
                 <div className="absolute inset-0 flex justify-start items-end z-20 p-4">
                   <div>
                     <h1 className="text-2xl text-white leading-tight font-semibold mb-2">
@@ -107,7 +107,7 @@ const ServicesSection = ({ homeData }) => {
                   objectFit="cover"
                   className="absolute inset-0 w-full h-full rounded-lg"
                 />
-                <div className="absolute inset-0 bg-black opacity-60 rounded-lg"></div>
+                <div className="absolute inset-0 bg-black opacity-30 rounded-lg"></div>
                 <div className="absolute inset-0 flex justify-start items-end z-20 p-4">
                   <div>
                     <h1 className="text-2xl text-white leading-tight font-semibold mb-2">
@@ -138,7 +138,7 @@ const ServicesSection = ({ homeData }) => {
                       src={data.sliderImage}
                       alt={data.alt}
                     />{" "}
-                    <div className="absolute inset-0 bg-black opacity-60 w-full h-full rounded-lg"></div>
+                    <div className="absolute inset-0 bg-black opacity-30 w-full h-full rounded-lg"></div>
                   </div>
                 ))}
               </Slider>
