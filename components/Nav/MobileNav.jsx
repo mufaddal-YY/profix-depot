@@ -28,7 +28,7 @@ const MobileNav = ({ productsData, contactData }) => {
       </SheetTrigger>
       <SheetContent className="z-[1001]">
         <SheetTitle></SheetTitle>
-        <div className="grid py-4 list-none space-y-2 ">
+        <div className="grid py-4 mt-4 list-none space-y-2 ">
           <Link
             href={"/"}
             className="text-md font-semibold text-white bg-primary px-4 py-2 hover:border-[#3e2522] transition-colors duration-600 ease-in-out">
@@ -41,7 +41,7 @@ const MobileNav = ({ productsData, contactData }) => {
                   className="text-white bg-primary"
                   href={`/products/${items.slug}`}>
                   <SheetClose>
-                    <span className="text-md mx-2 cursor-pointer flex flex-row items-center gap-2 font-semibold px-4 py-2 hover:border-[#3e2522] transition-colors duration-600 ease-in-out">
+                    <span className="text-md cursor-pointer flex flex-row items-center gap-2 font-semibold px-4 py-2 hover:border-[#3e2522] transition-colors duration-600 ease-in-out">
                       {items.headline} <IoIosArrowDown />
                     </span>
                   </SheetClose>

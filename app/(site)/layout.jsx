@@ -8,6 +8,7 @@ import Header from "@/components/Nav/Header";
 import Footer from "@/components/Nav/Footer";
 import { getContactData, getProductsData } from "@/sanity/fetchedData";
 import TopBar from "@/components/Nav/TopBar";
+import WhatsAppButton from "@/components/WhatsAppButton";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default async function RootLayout({ children }) {
         <Header productsData={productsData} contactData={contactData} />
         <main className="mt-32">{children}</main>
         <Footer contactData={contactData} productsData={productsData} />
+        <WhatsAppButton contactData={contactData} />
         <Suspense>
           <ProgressBars />
         </Suspense>

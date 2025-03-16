@@ -28,6 +28,14 @@ const TopBar = ({ contactData }) => {
                   <MdEmail /> Email us
                 </Button>
               </Link>
+
+              <Link href={"/#cta"} className="md:hidden lg:hidden flex">
+                <Button
+                  variant="secondary"
+                  className="ml-4 flex gap-2 text-primary font-semibold items-center">
+                  Get Quote
+                </Button>
+              </Link>
             </div>
             <div className="hidden md:flex lg:flex">
               <Link href={`tel:${item.contact}`}>

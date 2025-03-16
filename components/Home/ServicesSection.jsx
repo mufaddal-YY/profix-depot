@@ -89,7 +89,7 @@ const ServicesSection = ({ homeData }) => {
                     <p className="text-white leading-tight text-sm font-regular mb-2">
                       {item.bathroomDescription}
                     </p>
-                    <Link href="/products/bathroom-solutions">
+                    <Link href="/products/bath-solutions">
                       <button className="text-md font-bold text-white flex items-center">
                         Explore <IoIosArrowForward className="ml-2" />
                       </button>
