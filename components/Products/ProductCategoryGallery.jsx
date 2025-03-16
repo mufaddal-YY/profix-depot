@@ -6,7 +6,7 @@ import Link from "next/link";
 import { IoIosPhonePortrait } from "react-icons/io";
 
 const ProductCategoryGallery = ({ detailData }) => {
-  console.log(detailData);
+
   return (
     <main className="bg-white">
       <section className="container py-8">
@@ -26,7 +26,7 @@ const ProductCategoryGallery = ({ detailData }) => {
               <div className="mb-2 bg-white border-2 p-1 border-white hover:border-[#3e2522] shadow-[0px_0px_10px_1px_#edf2f7]">
                 <div className="w-full overflow-hidden">
                   <div className="relative h-[250px] overflow-hidden">
-                    <div className="relative w-full h-[250px]">
+                    <div className="relative w-full h-[350px]">
                       <Image
                         className="object-cover"
                         src={data?.image}
