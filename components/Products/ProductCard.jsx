@@ -4,7 +4,13 @@ import Link from "next/link";
 import { Button } from "../ui/button";
 import { FaArrowRight } from "react-icons/fa";
 
-const ProductCard = ({ slug, categoryTitle, categorySlug, image }) => {
+const ProductCard = ({
+  slug,
+  categoryTitle,
+  categorySlug,
+  image,
+  liveLink,
+}) => {
   return (
     <div className="mb-2 bg-white border-2 p-1 border-white hover:border-[#3e2522] shadow-[0px_0px_10px_1px_#edf2f7]">
       <div className="w-full overflow-hidden">
@@ -33,13 +39,15 @@ const ProductCard = ({ slug, categoryTitle, categorySlug, image }) => {
                 </h4>
               </Link>
             </div>
-            <div>
-              <Link href={`/products/${slug}/${categorySlug}`}>
-                <Button className="-ml-3" size="sm" variant="link">
-                  View <FaArrowRight />
-                </Button>
-              </Link>
-            </div>
+           
+              <div>
+                <Link href={`/products/${slug}/${categorySlug}`}>
+                  <Button className="-ml-3" size="sm" variant="link">
+                    View <FaArrowRight />
+                  </Button>
+                </Link>
+              </div>
+            
           </div>
         </div>
       </div>

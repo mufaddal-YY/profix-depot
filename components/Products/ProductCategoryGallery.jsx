@@ -1,12 +1,16 @@
 import React from "react";
 import ProductCard from "./ProductCard";
 import Image from "next/image";
+import { Button } from "../ui/button";
+import Link from "next/link";
+import { IoIosPhonePortrait } from "react-icons/io";
 
 const ProductCategoryGallery = ({ detailData }) => {
+  console.log(detailData);
   return (
     <main className="bg-white">
       <section className="container py-8">
-        {/* <div className="p-2">
+        <div className="p-2">
           <div className="border-l-4 border-[#3e2522] mb-8">
             <h4 className="text-md lg:text-md text-[#3e2522] capitalize font-semibold pl-4">
               Gallery
@@ -15,7 +19,7 @@ const ProductCategoryGallery = ({ detailData }) => {
               Our Work
             </h1>
           </div>
-        </div> */}
+        </div>
         <article className="flex flex-wrap flex-row">
           {detailData?.images?.map((data, idx) => (
             <div className="w-full mb-2 md:w-1/2 lg:w-1/3 lg:p-2" key={idx}>
@@ -42,6 +46,15 @@ const ProductCategoryGallery = ({ detailData }) => {
                           {data?.imageTitle}
                         </h4>
                       </div>
+                      {detailData?.liveLink ? (
+                        <div>
+                          <Link href={detailData.liveLink} target="_blank">
+                            <Button>
+                              See it in room <IoIosPhonePortrait />{" "}
+                            </Button>
+                          </Link>
+                        </div>
+                      ) : null}
                     </div>
                   </div>
                 </div>

@@ -70,6 +70,11 @@ export default {
       },
     },
     {
+      name: "liveLink",
+      title: "See it in room link",
+      type: "string",
+    },
+    {
       name: "categories",
       title: "Categories",
       type: "array",
@@ -114,6 +119,12 @@ export default {
                 },
               ],
             },
+            {
+              name: "liveLink",
+              title: "See it in room link",
+              type: "string",
+            },
+
             {
               name: "images",
               title: "Images",

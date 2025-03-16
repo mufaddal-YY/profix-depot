@@ -56,6 +56,7 @@ export async function getProductsData() {
          "slug": slug.current,
          subHeadline,
          "image": image.asset->url,
+         liveLink,
          categories[]{
          categoryTitle,
          "categorySlug": categorySlug.current,
@@ -84,12 +85,14 @@ export async function getProductsDetailData(slug) {
         contentHeadline,
         "additionalImage": additionalImage.asset->url,        
         "image": image.asset->url,
+        liveLink,
         categories[]{
           categoryTitle,
           "categorySlug": categorySlug.current,
           categoryDescription,
           "image": image.asset->url,
           content[],
+          liveLink,
           images[]{
             imageTitle,
             "image": image.asset->url,
@@ -110,6 +113,7 @@ export async function getCategoryDetailData(categorySlug) {
           categoryDescription,
           "image": image.asset->url,
           content,
+            liveLink,
           images[]{
             imageTitle,
             "image": image.asset->url
