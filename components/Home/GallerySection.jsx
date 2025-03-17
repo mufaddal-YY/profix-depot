@@ -85,7 +85,7 @@ const GallerySection = ({ galleryData }) => {
                     />
 
                     {/* Overlay for better readability */}
-                    <div className="absolute inset-0 bg-black/40"></div>
+                   
 
                     {/* Image Title at the bottom with white background */}
                     {/* <div className="absolute bottom-0 left-0 w-full bg-white text-center py-2">

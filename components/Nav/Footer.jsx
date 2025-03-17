@@ -15,7 +15,6 @@ const Footer = ({ productsData, contactData }) => {
                 <Image width={250} height={50} src={Logo} alt="footer logo" />
               </Link>
             </div>
-            
           </div>
           <div className="flex flex-col gap-2 mb-4 w-full md:w-1/2 lg:w-1/4 p-2">
             <div className="mb-2 border-b-[1px] border-gray-400">
@@ -36,9 +35,6 @@ const Footer = ({ productsData, contactData }) => {
                     <Link href={`/products/${item.slug}`}>{item.headline}</Link>
                   </li>
                 ))}
-                <li className="text-md capitalize">
-                  <Link href={"/contact"}>Contact</Link>
-                </li>
               </ul>
             </div>
           </div>
