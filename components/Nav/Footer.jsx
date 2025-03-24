@@ -3,6 +3,12 @@ import Link from "next/link";
 import Image from "next/image";
 import Logo from "@/public/logo.png";
 import { MdEmail, MdCall, MdLocationOn } from "react-icons/md";
+import {
+  FaFacebookF,
+  FaInstagram,
+  FaWhatsapp,
+  FaYoutube,
+} from "react-icons/fa";
 
 const Footer = ({ productsData, contactData }) => {
   return (
@@ -14,6 +20,37 @@ const Footer = ({ productsData, contactData }) => {
               <Link href={"/"} className="flex items-center">
                 <Image width={250} height={50} src={Logo} alt="footer logo" />
               </Link>
+            </div>
+            <div className="py-2">
+              {contactData.map((item, idx) => (
+                <div className="flex flex-row justify-start gap-4" key={idx}>
+                  <Link
+                    target="_blank"
+                    href={item.instagram}
+                    className="flex items-center">
+                    <div className="border-2 rounded-full p-2 hover:border-[#35750E] hover:text-[#35750E]">
+                      <FaInstagram />
+                    </div>
+                  </Link>
+                  <Link
+                    target="_blank"
+                    href={item.facebook}
+                    className="flex items-center">
+                    <div className="border-2 rounded-full p-2 hover:border-[#35750E] hover:text-[#35750E]">
+                      <FaFacebookF />
+                    </div>
+                  </Link>
+
+                  <Link
+                    target="_blank"
+                    href={`https://api.whatsapp.com/send/?phone=%2B${item.whatsapp}&text=Hi&type=phone_number&app_absent=0`}
+                    className="flex items-center">
+                    <div className="border-2 rounded-full p-2 hover:border-[#35750E] hover:text-[#35750E]">
+                      <FaWhatsapp />
+                    </div>
+                  </Link>
+                </div>
+              ))}
             </div>
           </div>
           <div className="flex flex-col gap-2 mb-4 w-full md:w-1/2 lg:w-1/4 p-2">
@@ -87,7 +124,7 @@ const Footer = ({ productsData, contactData }) => {
         <div className="py-2 text-center font-regular items-center text-md text-primary">
           <span>
             © 2025 Profix Depot | Home Imrovement Store. All Rights Reserved. |
-            <Link href={"/return-policy"}>Return Policy</Link>
+            <Link href={"/return-policy"}> Return Policy</Link>
           </span>
         </div>
       </div>
