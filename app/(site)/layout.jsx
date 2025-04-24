@@ -28,27 +28,35 @@ export default async function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
-        <Script id="google-analytics" strategy="afterInteractive">
-          {`(function (w, d, s, l, i) {
-            w[l] = w[l] || [];
-            w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
-            var f = d.getElementsByTagName(s)[0],
-              j = d.createElement(s),
-              dl = l != "dataLayer" ? "&l=" + l : "";
-            j.async = true;
-            j.src = "https://www.googletagmanager.com/gtag/js?id=AW-17015153915" + i + dl;
-            f.parentNode.insertBefore(j, f);
-          })(window, document, "script", "dataLayer", "AW-17015153915")`}
+        {/* Google Ads Global site tag (gtag.js) */}
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=AW-17015153915"
+          strategy="afterInteractive"
+        />
+
+        {/* gtag config */}
+        <Script id="gtag-init" strategy="afterInteractive">
+          {`
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'AW-17015153915');
+        `}
+        </Script>
+
+        {/* conversion event (optional, only if firing immediately) */}
+        <Script id="gtag-conversion" strategy="afterInteractive">
+          {`
+          gtag('event', 'conversion', {
+            'send_to': 'AW-17015153915/RkLhCJKF9rkaEPvJurE_',
+            'value': 1.0,
+            'currency': 'CAD',
+            'transaction_id': ''
+          });
+        `}
         </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=AW-17015153915"
-            height="0"
-            width="0"
-            style={{ display: "none", visibility: "hidden" }}></iframe>
-        </noscript>
         <TopBar contactData={contactData} />
         <Header productsData={productsData} contactData={contactData} />
         <main className="mt-32">{children}</main>
