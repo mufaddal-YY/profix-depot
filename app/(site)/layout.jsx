@@ -55,6 +55,16 @@ export default async function RootLayout({ children }) {
           });
         `}
         </Script>
+        <Script id="google-ads-conversion" strategy="afterInteractive">
+          {`
+    gtag('event', 'conversion', {
+      send_to: 'AW-17015153915/RkLhCJKF9rkaEPvJurE_',
+      value: 1.0,
+      currency: 'CAD',
+      transaction_id: ''
+    });
+  `}
+        </Script>
       </head>
       <body className={`${inter.className} antialiased`}>
         <TopBar contactData={contactData} />
