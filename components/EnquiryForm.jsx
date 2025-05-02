@@ -13,6 +13,8 @@ import { useForm } from "react-hook-form";
 import * as z from "zod";
 import { cn } from "@/lib/utils";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { toast } from "sonner";
+import { sendEmail } from "@/lib/resend";
 
 export const EnquirySchema = z.object({
   firstName: z.string().min(3).max(30),
@@ -29,7 +31,7 @@ const EnquiryForm = () => {
     formState: { errors },
     reset,
   } = useForm({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(EnquirySchema),
   });
 
   const form = useForm({
