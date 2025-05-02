@@ -21,13 +21,13 @@ const TopBar = ({ contactData }) => {
                 </Button>
               </Link>
 
-              <Link href={`mailto:${item.email}`}>
+              <a href={`mailto:${item.email}`}>
                 <Button
                   variant="secondary"
                   className="ml-4 flex gap-2 text-primary font-semibold items-center">
                   <MdEmail /> Email us
                 </Button>
-              </Link>
+              </a>
 
               <Link href={"/#cta"} className="md:hidden lg:hidden flex">
                 <Button
