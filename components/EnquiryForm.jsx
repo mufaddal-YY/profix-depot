@@ -35,7 +35,7 @@ const EnquiryForm = () => {
   });
 
   const form = useForm({
-    resolver: zodResolver(formSchema),
+    resolver: zodResolver(EnquirySchema),
     defaultValues: {
       firstName: "",
       lastName: "",
