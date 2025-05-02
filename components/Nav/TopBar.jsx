@@ -5,11 +5,14 @@ import Link from "next/link";
 
 const TopBar = ({ contactData }) => {
   return (
+    
     <main className="bg-primary w-full fixed top-0 z-[1000]">
       {contactData?.map((item, idx) => (
         <section className="container p-2" key={idx}>
           <article className="flex flex-row justify-between ">
+            
             <div className="flex flex-row ">
+              
               <Link
                 target="_blank"
                 href={`
@@ -37,6 +40,7 @@ const TopBar = ({ contactData }) => {
                 </Button>
               </Link>
             </div>
+
             <div className="hidden md:flex lg:flex">
               <Link href={`tel:${item.contact}`}>
                 <Button
@@ -46,6 +50,7 @@ const TopBar = ({ contactData }) => {
                 </Button>
               </Link>
             </div>
+
           </article>
         </section>
       ))}

@@ -10,6 +10,7 @@ import { getContactData, getProductsData } from "@/sanity/fetchedData";
 import TopBar from "@/components/Nav/TopBar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 import Script from "next/script";
+import { Toaster } from "sonner";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,7 +51,7 @@ export default async function RootLayout({ children }) {
         </noscript>
         <TopBar contactData={contactData} />
         <Header productsData={productsData} contactData={contactData} />
-        <main className="mt-32">{children}</main>
+        <main className="mt-32">{children}<Toaster closeButton position="top-right" richColors /></main>
         <Footer contactData={contactData} productsData={productsData} />
         <WhatsAppButton contactData={contactData} />
         <Suspense>

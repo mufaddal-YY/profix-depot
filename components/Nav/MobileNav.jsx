@@ -22,6 +22,7 @@ import Logo from "@/public/logo.png";
 
 const MobileNav = ({ productsData, contactData }) => {
   return (
+    
     <Sheet>
       <SheetTrigger asChild>
         <AlignJustify className="text-primary cursor-pointer" />
@@ -69,11 +70,13 @@ const MobileNav = ({ productsData, contactData }) => {
             className="text-md font-semibold text-white bg-primary px-4 py-2 hover:border-[#3e2522] transition-colors duration-600 ease-in-out">
             <SheetClose>Gallery</SheetClose>
           </Link>
+
           <Link
             href={"/about"}
             className="text-md font-semibold text-white bg-primary px-4 py-2 hover:border-[#3e2522] transition-colors duration-600 ease-in-out">
             <SheetClose>About</SheetClose>
           </Link>
+
         </div>
         {contactData.map((items, idx) => (
           <div className="grid gap-4 py-4" key={idx}>
