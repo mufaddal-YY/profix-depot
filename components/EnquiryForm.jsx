@@ -22,10 +22,18 @@ export const EnquirySchema = z.object({
 });
 
 const EnquiryForm = () => {
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm({
+    resolver: zodResolver(formSchema),
+  });
 
   const form = useForm({
-    resolver: zodResolver(EnquirySchema),
+    resolver: zodResolver(formSchema),
     defaultValues: {
       firstName: "",
       lastName: "",
@@ -34,18 +42,18 @@ const EnquiryForm = () => {
     },
   });
 
-  async function onSubmit(values) {
-    setIsSubmitting(true);
+  const onSubmit = async (formData) => {
+    setIsLoading(true);
     try {
-      await sendEmail(values);
+      await sendEmail(formData);
+      toast.success("Email Sent Successfully!");
       form.reset();
-      router.push("/villas");
     } catch (error) {
-      console.error("Submission failed", error);
+      toast.error("Failed to send email.");
     } finally {
-      setIsSubmitting(false);
+      setIsLoading(false);
     }
-  }
+  };
 
   return (
     <main className="bg-white p-3 lg:p-6">
@@ -55,7 +63,10 @@ const EnquiryForm = () => {
             Let’s build your <br /> Dream space together!
           </h4>
           <Form {...form}>
-            <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-3">
+            <form
+              action={sendEmail}
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="space-y-3">
               <div className="flex flex-col lg:flex-row justify-between gap-2">
                 <div className="w-full">
                   <FormField
@@ -118,11 +129,8 @@ const EnquiryForm = () => {
                 </div>
               </div>
               <div className="flex justify-center py-4">
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                 >
-                  Submit
+                <Button type="submit" disabled={isLoading}>
+                  {isLoading ? "Submitting..." : "Submit"}
                 </Button>
               </div>
             </form>

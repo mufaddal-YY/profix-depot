@@ -7,6 +7,7 @@ import WhyUs from "@/components/Home/WhyUs";
 import GallerySection from "@/components/Home/GallerySection";
 import CTA from "@/components/CTA";
 export default async function Home() {
+  
   const homeData = await getHomeData();
   const galleryData = await getGalleryData();
 
